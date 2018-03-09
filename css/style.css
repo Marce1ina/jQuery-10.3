@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#carousel {
+  width: 940px;
+  height: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 4px solid black;
+  border-radius: 20%;
+}
+
+#carousel ul {
+  width: calc(940px*4);
+  list-style-type: none;
+}
+
+#carousel ul li {
+  width: 940px;
+  height: 600px;
+  list-style: none;
+  float: left;
+}
+/*# sourceMappingURL=style.css.map */
