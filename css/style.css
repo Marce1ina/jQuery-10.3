@@ -50,9 +50,10 @@ body {
 #nav-arrows i {
   color: #f39c12;
   font-size: 70px;
+  cursor: pointer;
 }
 
-#nav-pills {
+#nav-dots {
   position: absolute;
   bottom: 20px;
   width: 932px;
@@ -62,12 +63,17 @@ body {
       justify-content: center;
 }
 
-#nav-pills .pill {
+#nav-dots .dot {
   border-radius: 50%;
   height: 15px;
   width: 15px;
-  background: #f39c12;
+  background: white;
   border: 2px solid #f39c12;
   margin: 20px 10px;
+  cursor: pointer;
+}
+
+#nav-dots .dot-active {
+  background: #f39c12;
 }
 /*# sourceMappingURL=style.css.map */
