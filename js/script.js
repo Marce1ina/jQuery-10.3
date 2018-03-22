@@ -50,19 +50,33 @@ $(document).ready(function () {
         carouselList.animate({ 'marginLeft': 0 }, 800, );
     };
 
-    setInterval(function () {changeSlidesNext(1);}, 6000);
+    var myInterval = setInterval(function(){
+        changeSlidesNext(1);
+    }, 4000);
 
     $("[class$='right']").on("click", function (event) {
         changeSlidesNext(1);
+        clearInterval(myInterval);
+        myInterval = setInterval(function(){
+            changeSlidesNext(1);
+        }, 4000);
     });
 
     $("[class$='left']").on("click", function (event) {
         changeSlidesPrev(1);
+        clearInterval(myInterval);
+        myInterval = setInterval(function(){
+            changeSlidesNext(1);
+        }, 4000);
     });
 
     $(".dot").on("click", function (event) {
         var dotIndex = $(".dot").index(this);
         var activeDotIndex = $(".dot").index($(".dot-active"));
+        clearInterval(myInterval);
+        myInterval = setInterval(function(){
+            changeSlidesNext(1);
+        }, 4000);
         if (dotIndex < activeDotIndex) {
             changeSlidesPrev(activeDotIndex - dotIndex);
         }
